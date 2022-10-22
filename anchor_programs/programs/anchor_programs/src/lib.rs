@@ -4,7 +4,7 @@ use anchor_spl::token::{self, Token};
 use std::mem::size_of;
 use anchor_lang::solana_program::entrypoint::ProgramResult;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("5rUGRjewt6pUSPQEkVMLUzoNbn7vYcdDTFFtGQF5eq7D");
 
 // Post and comment text length
 const TEXT_LENGTH: usize = 1024;

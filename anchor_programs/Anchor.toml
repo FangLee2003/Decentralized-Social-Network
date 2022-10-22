@@ -2,7 +2,7 @@
 seeds = false
 skip-lint = false
 [programs.devnet]
-anchor_programs = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+anchor_programs = "5rUGRjewt6pUSPQEkVMLUzoNbn7vYcdDTFFtGQF5eq7D"
 
 [registry]
 url = "https://api.apr.dev"
