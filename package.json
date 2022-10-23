@@ -14,11 +14,14 @@
     "@solana/wallet-adapter-wallets": "^0.19.5",
     "@solana/web3.js": "^1.66.2",
     "anchor": "^1.4.1",
+    "javascript-time-ago": "^2.5.7",
     "next": "latest",
     "programs": "^1.0.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-hot-toast": "^2.4.0"
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.6.0",
+    "react-simple-hook-modal": "^1.1.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",

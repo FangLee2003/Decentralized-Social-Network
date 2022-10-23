@@ -11,7 +11,7 @@ const SignUp = ({ setRegistered, name, setName, url, setUrl }) => {
     inputContainer: `flex items-center w-[20rem] h-[2.5rem] bg-[#3a3b3d] rounded-full`,
     inputField: `bg-transparent flex-1 m-3 outline-none text-white px-2`,
     randomUrl: `h-full bg-[#2d2d2d] hover:bg-[#252626] text-white px-2 py-2 ml-1 hover:px-3 rounded-full cursor-pointer duration-[0.2s] ease-in-out`,
-    submitButton: `bg-[#3a3b3d] text-white text-xl font-semibold mt-5 px-4 py-2 hover:px-6 rounded-full cursor-pointer duration-[0.2s] ease-in-out`,
+    submitButton: `bg-[#3a3b3d] text-white text-lg font-semibold mt-5 px-4 py-2 hover:px-6 rounded-full cursor-pointer duration-[0.2s] ease-in-out`,
   };
 
   const createUser = async (event) => {

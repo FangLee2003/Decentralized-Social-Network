@@ -878,7 +878,7 @@
     "@babel/plugin-transform-react-jsx-development" "^7.18.6"
     "@babel/plugin-transform-react-pure-annotations" "^7.18.6"
 
-"@babel/runtime@^7.12.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.17.9", "@babel/runtime@^7.6.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.17.9", "@babel/runtime@^7.3.1", "@babel/runtime@^7.6.2", "@babel/runtime@^7.8.4":
   version "7.19.4"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.19.4.tgz"
   integrity sha512-EXpLCrk55f+cYqmHsSR+yD/0gAIMxxA9QK9lnQWzhMCvt+YmoBN7Zx94s++Kv0+unHk39vxNO8t+CMA2WSS3wA==
@@ -1768,30 +1768,9 @@
   dependencies:
     "@solana/wallet-adapter-base" "^0.9.18"
 
-"@solana/web3.js@^1.32.0", "@solana/web3.js@^1.36.0", "@solana/web3.js@^1.44.3":
+"@solana/web3.js@^1.32.0", "@solana/web3.js@^1.36.0", "@solana/web3.js@^1.44.3", "@solana/web3.js@^1.66.2":
   version "1.66.2"
   resolved "https://registry.npmjs.org/@solana/web3.js/-/web3.js-1.66.2.tgz"
-  integrity sha512-RyaHMR2jGmaesnYP045VLeBGfR/gAW3cvZHzMFGg7bkO+WOYOYp1nEllf0/la4U4qsYGKCsO9eEevR5fhHiVHg==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    "@noble/ed25519" "^1.7.0"
-    "@noble/hashes" "^1.1.2"
-    "@noble/secp256k1" "^1.6.3"
-    "@solana/buffer-layout" "^4.0.0"
-    bigint-buffer "^1.1.5"
-    bn.js "^5.0.0"
-    borsh "^0.7.0"
-    bs58 "^4.0.1"
-    buffer "6.0.1"
-    fast-stable-stringify "^1.0.0"
-    jayson "^3.4.4"
-    node-fetch "2"
-    rpc-websockets "^7.5.0"
-    superstruct "^0.14.2"
-
-"@solana/web3.js@^1.66.2":
-  version "1.66.2"
-  resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.66.2.tgz#80b43c5868b846124fe3ebac7d3943930c3fa60c"
   integrity sha512-RyaHMR2jGmaesnYP045VLeBGfR/gAW3cvZHzMFGg7bkO+WOYOYp1nEllf0/la4U4qsYGKCsO9eEevR5fhHiVHg==
   dependencies:
     "@babel/runtime" "^7.12.5"
@@ -3765,6 +3744,11 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
+hooks@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/hooks/-/hooks-0.3.2.tgz#a31f060c2026cea6cf1ca3eb178430e718e1c4a3"
+  integrity sha512-TqeFzUf12rSzcbm5lUls81jimUC8TmXZ4ANPxxeeMou09hrjBcHYhAQ0WgyN5YqNCXOzz7L6xVNl/+ctFuSeOw==
+
 http-errors@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/http-errors/-/http-errors-2.0.0.tgz"
@@ -3966,6 +3950,13 @@ isomorphic-ws@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/isomorphic-ws/-/isomorphic-ws-4.0.1.tgz"
   integrity sha512-BhBvN2MBpWTaSHdWRb/bwdZJ1WaehQ2L1KngkCkfLUGF0mAWAT1sQUQacEmQ0jXkFw/czDXPNQSL5u2/Krsz1w==
+
+javascript-time-ago@^2.5.7:
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/javascript-time-ago/-/javascript-time-ago-2.5.7.tgz#a99a77c23e2e59810da4b41b935801928e209c87"
+  integrity sha512-EGvh6K4hpJz0S0aZinbW2EfXDqT/JBB84HfMOFDTzGg7yjpjql9feSgtlG1JQ6b6/NkIxl+PoKSUTEMsatTuTg==
+  dependencies:
+    relative-time-format "^1.1.4"
 
 jayson@^3.4.4:
   version "3.7.0"
@@ -4669,7 +4660,7 @@ programs@^1.0.0:
   dependencies:
     express "^4.15.2"
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -4820,6 +4811,11 @@ react-hot-toast@^2.4.0:
   dependencies:
     goober "^2.1.10"
 
+react-icons@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.6.0.tgz#f83eda179af5d02c047449a20b702c858653d397"
+  integrity sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -4853,6 +4849,22 @@ react-qr-reader@^2.2.1:
     jsqr "^1.2.0"
     prop-types "^15.7.2"
     webrtc-adapter "^7.2.1"
+
+react-simple-hook-modal@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-simple-hook-modal/-/react-simple-hook-modal-1.1.0.tgz#e978920d15940dc638268b8dc3627bd2bd8cf043"
+  integrity sha512-sA/amC1l6nvrcsdPBzJR7HSMV7OnoScS5vlSDcEOxV8tfmEK/PpxoFP/DHnAdFNusMLpZm3SsM0cMJ/PmZ6oJA==
+  dependencies:
+    hooks "^0.3.2"
+    react-spring "^8.0.27"
+
+react-spring@^8.0.27:
+  version "8.0.27"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
+  integrity sha512-nDpWBe3ZVezukNRandTeLSPcwwTMjNVu1IDq9qA/AMiUqHuRN4BeSWvKr3eIxxg1vtiYiOLy4FqdfCP5IoP77g==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    prop-types "^15.5.8"
 
 react@16.13.1:
   version "16.13.1"
@@ -4949,6 +4961,11 @@ regjsparser@^0.9.1:
   integrity sha512-dQUtn90WanSNl+7mQKcXAgZxvUe7Z0SqXlgzv0za4LwiUhyzBC58yQO3liFoUgu8GiJVInAhJjkj1N0EtQ5nkQ==
   dependencies:
     jsesc "~0.5.0"
+
+relative-time-format@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/relative-time-format/-/relative-time-format-1.1.4.tgz#50c308a482985333a13df119b1ff2763e3eb0685"
+  integrity sha512-WRWEDEZFTD/95oYMd58kzlYHI6QzexMpPkxvi4/P+NLdzli/tteNonmAa5jYLm8ehJVTGiM2siNg7i1Dkn/gDw==
 
 require-directory@^2.1.1:
   version "2.1.1"

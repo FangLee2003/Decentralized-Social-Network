@@ -1,8 +1,25 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import dynamic from "next/dynamic";
+import "../styles/globals.css";
+import { WalletBalanceProvider } from "../context/useWalletBalance";
+import { ModalProvider } from "react-simple-hook-modal";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const WalletConnectionProvider = dynamic(
+  () => import("../context/WalletConnectionProvider"),
+  {
+    ssr: false,
+  }
+);
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <WalletConnectionProvider>
+      <WalletBalanceProvider>
+        <ModalProvider>
+          <Component {...pageProps} />
+        </ModalProvider>
+      </WalletBalanceProvider>
+    </WalletConnectionProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

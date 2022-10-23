@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useWallet } from '@solana/wallet-adapter-react'
+import { useWallet } from "@solana/wallet-adapter-react";
 import SignUp from "../components/SignUp";
 import Header from "../components/Header";
 import LeftSidebar from "../components/LeftSidebar";
@@ -11,7 +11,7 @@ const style = {
   homeWrapper: `flex`,
   center: `flex-1`,
   main: `flex-1 flex justify-center`,
-  signupContainer: `flex justify-center items-center w-screen h-[70vh]`,
+  signupContainer: `flex items-center justify-center w-screen h-[70vh]`,
 };
 
 export default function Home() {
@@ -20,24 +20,24 @@ export default function Home() {
   const [url, setUrl] = useState("");
   const [users, setUsers] = useState([]);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     await requestUsersData();
-  //   })();
-  // }, []);
+  useEffect(() => {
+    (async () => {
+      await requestUsersData();
+    })();
+  }, []);
 
-  // const wallet = useWallet();
+  const wallet = useWallet();
 
-  // const requestUsersData = async (activeAccount) => {
-  //   try {
-  //     const response = await fetch(`/api/fetchUsers`);
-  //     const data = await response.json();
+  const requestUsersData = async (activeAccount) => {
+    try {
+      const response = await fetch(`/api/fetchUsers`);
+      const data = await response.json();
 
-  //     setUsers(data.data);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+      setUsers(data.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className={style.wrapper}>
