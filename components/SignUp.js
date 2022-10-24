@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const SignUp = ({ setRegistered, name, setName, url, setUrl }) => {
   const style = {
-    wrapper: `flex flex-col p-6 justify-center items-center h-full w-full bg-[#252526] w-min h-min rounded-2xl`,
+    wrapper: `flex flex-col m-auto p-6 justify-center items-center h-full w-full bg-[#252526] w-min h-min rounded-2xl`,
     title: `text-[#afb3b8] font-semibold text-xl`,
     form: `flex flex-col items-center`,
     fieldContainer: `my-4`,
@@ -64,6 +64,8 @@ const SignUp = ({ setRegistered, name, setName, url, setUrl }) => {
               onChange={(event) => setName(event.target.value)}
               required
               className={style.inputField}
+              maxlength="20"
+              placeholder="20 characters limit"
             />
           </div>
         </div>

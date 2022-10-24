@@ -11,22 +11,22 @@ require("@solana/wallet-adapter-react-ui/styles.css");
 
 const Header = ({ name, url }) => {
   const style = {
-    wrapper: `flex items-center w-full h-[4rem] justify-around px-[1rem] py-[0.2rem] sticky top-0 bg-[#252526] shadow-[0px 5px 8px -9px rgba(0, 0, 0, 0.75)] z-20`,
-    headerLeft: `flex justify-center gap-[0.6rem]`,
+    wrapper: `flex items-center w-full h-[4rem] justify-center px-[1rem] py-[0.2rem] sticky top-0 bg-[#252526] shadow-[0px 5px 8px -9px rgba(0, 0, 0, 0.75)] z-20`,
+    headerLeft: `flex justify-start gap-[1rem] w-[35vw]`,
     logoLeft: `items-center flex object-contain`,
-    searchContainer: `flex items-center bg-[#3a3b3d] max-w-[18rem] rounded-full py-2 px-2 text-[#b0b3b8]`,
-    searchInput: `border-none px-[0.6rem] bg-transparent outline-none w-[18rem] text-white placeholder:text-[#b0b3b8]`,
-    headerCenter: `flex-1 flex items-center justify-center h-full py-2`,
-    itemCenter: `flex items-center px-[1.8rem] cursor-pointer duration-[0.5s]  hover:bg-[#555657] rounded-[10px]`,
+    searchContainer: `flex items-center bg-[#3a3b3d] w-[20vw] rounded-full py-2 px-4 text-[#b0b3b8]`,
+    searchInput: `border-none px-[0.6rem] bg-transparent outline-none w-[15rem] text-white placeholder:text-[#b0b3b8]`,
+    headerCenter: `flex-1 flex items-center justify-center h-full w-[30vw] py-2`,
+    itemCenter: `flex items-center px-[2rem] py-[1rem] cursor-pointer duration-[0.5s] hover:bg-[#555657] rounded-[10px]`,
     iconCenter: `text-2xl text-[#666]`,
-    headerRight: `flex h-min`,
+    headerRight: `flex justify-end w-[35vw] h-min`,
     buttonRight: `flex items-center px-3 mx-2 rounded-[0.2rem] cursor-pointer`,
-    userInfo: `bg-[#31e3bd] hover:bg-[#438791]`,
-    userName: `font-bold ml-2 text-black`,
+    userInfo: `bg-[#FFFFFF] hover:bg-[#e1e1e1]`,
+    userName: `ml-2 text-black font-semibold`,
     userImage: `rounded-full object-cover`,
-    balanceContainer: `bg-[#ec55bc] hover:bg-[#572079] text-black`,
+    balanceContainer: `bg-[#FFFFFF] hover:bg-[#e1e1e1] text-black hover:text-white`,
     balanceIcon: `object-covers`,
-    balanceText: `text-white font-bold ml-2`,
+    balanceText: `ml-2 text-black font-semibold `,
   };
   const [balance] = useWalletBalance();
 
@@ -35,9 +35,9 @@ const Header = ({ name, url }) => {
       <div className={style.headerLeft}>
         <Image
           className={style.logoLeft}
-          src="ttps://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"
-          height={30}
-          width={30}
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"
+          height={40}
+          width={40}
           alt="logo"
         />
         <div className={style.searchContainer}>

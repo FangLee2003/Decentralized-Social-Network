@@ -7,7 +7,7 @@ import { SOLANA_HOST } from '../utils/const'
 const BalanceContext = createContext(null)
 
 const connection = new anchor.web3.Connection(SOLANA_HOST)
-
+ 
 export default function useWalletBalance() {
   const [balance, setBalance] = useContext(BalanceContext)
   return [balance, setBalance]
