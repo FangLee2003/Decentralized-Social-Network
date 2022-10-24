@@ -3,7 +3,6 @@ import Image from "next/image";
 import { BiLike } from "react-icons/bi";
 import { FaRegCommentAlt } from "react-icons/fa";
 import { TiArrowForwardOutline } from "react-icons/ti";
-import { FacebookShareButton } from "react-share";
 import CommentSection from "./CommentSection";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
@@ -87,7 +86,6 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
         </div>
         <div className={style.reactionItem} onClick={postDetail}>
           <TiArrowForwardOutline size={30} />
-          <FacebookShareButton />
           <div className={style.reactionsText}>Share</div>
         </div>
       </div>
