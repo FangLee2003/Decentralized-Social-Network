@@ -13,13 +13,13 @@ const timeAgo = new TimeAgo("en-US");
 
 const Post = ({ post, viewDetail, createComment, name, url }) => {
   const style = {
-    wrapper: `w-[100%] mt-[1rem] rounded-[0.6rem] bg-[#252526] text-white p-[0.4rem] pb-0`,
+    wrapper: `w-[100%] mt-[1rem] rounded-[0.6rem] bg-[#252526] text-white pt-[1rem] px-[1rem]`,
     postPublisher: `flex position-relative items-center`,
     avatar: `rounded-full`,
     publisherDetails: `flex flex-col ml-[0.5rem]`,
-    name: `text-sm`,
+    name: `text-bold`,
     timestamp: `text-sm text-[#777]`,
-    text: `py-[1rem] px-[1.2rem]`,
+    text: `py-[1rem]`,
     reactionsContainer: `border-t border-[#3a3b3e] text-[18px] flex justify-evenly text-[#b0b3b8] cursor-pointer py-1`,
     reactionItem: `flex flex-1 items-center justify-center rounded-[0.4rem] hover:bg-[#404041] py-2`,
     reactionsText: `ml-[1rem]`,
@@ -58,8 +58,8 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
         <Image
           src={post.posterUrl}
           className={style.avatar}
-          height={44}
-          width={44}
+          height={40}
+          width={40}
           alt="publisher profile image"
         />
         <div className={style.publisherDetails}>

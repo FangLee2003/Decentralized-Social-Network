@@ -8,7 +8,7 @@ const CreatePost = ({ savePost, getAllPosts, name, url }) => {
   const [input, setInput] = useState("");
 
   const style = {
-    wrapper: `w-[100%] flex mt-[1rem] flex-col rounded-[0.6rem] bg-[#252526] p-2 pt-4 pb-0 shadow-[0px 5px 7px -7px rgba(0, 0, 0, 0.75)]`,
+    wrapper: `w-[100%] flex mt-[1rem] flex-col rounded-[0.6rem] bg-[#252526] pt-[1rem] px-[1rem] shadow-[0px 5px 7px -7px rgba(0, 0, 0, 0.75)]`,
     formContainer: `flex pb-3 mb-2 border-b border-[#404041]`,
     profileImage: `rounded-full object-cover`,
     form: `flex-1 flex items-center`,
