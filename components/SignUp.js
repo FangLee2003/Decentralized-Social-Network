@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { useWallet } from "@solana/wallet-adapter-react";
+import toast, { Toaster } from "react-hot-toast";
 
 const SignUp = ({ setRegistered, name, setName, url, setUrl }) => {
   const style = {
@@ -14,26 +16,39 @@ const SignUp = ({ setRegistered, name, setName, url, setUrl }) => {
     submitButton: `bg-[#3a3b3d] text-white text-lg font-semibold mt-5 px-4 py-2 hover:px-6 rounded-full cursor-pointer duration-[0.2s] ease-in-out`,
   };
 
+  const wallet = useWallet();
+
   const createUser = async (event) => {
-    setRegistered(true);
-
-    const res = await window.solana.connect();
-    const walletAddress = res.publicKey.toString();
-
-    try {
-      await fetch(`/api/createUser`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+    if (!wallet.publicKey) {
+      toast("Please connect your wallet!", {
+        icon: "❌",
+        style: {
+          borderRadius: "10px",
+          background: "#252526",
+          color: "#fffcf9",
         },
-        body: JSON.stringify({
-          userWalletAddress: walletAddress,
-          name: name,
-          profileImage: event.target.url.value,
-        }),
       });
-    } catch (error) {
-      console.error(error);
+    } else {
+      setRegistered(true);
+
+      const res = await window.solana.connect();
+      const walletAddress = res.publicKey.toString();
+
+      try {
+        await fetch(`/api/createUser`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userWalletAddress: walletAddress,
+            name: name,
+            profileImage: event.target.url.value,
+          }),
+        });
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
 
@@ -46,6 +61,7 @@ const SignUp = ({ setRegistered, name, setName, url, setUrl }) => {
 
   return (
     <div className={style.wrapper}>
+      <Toaster position="bottom-left" reverseOrder={false} />
       <div className={style.logoContainer}>
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"

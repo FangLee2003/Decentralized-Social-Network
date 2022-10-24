@@ -1,10 +1,11 @@
-import * as anchor from '@project-serum/anchor'
+import * as anchor from "@project-serum/anchor";
 import { WalletNotConnectedError } from "@solana/wallet-adapter-base";
 import { STABLE_POOL_IDL, STABLE_POOL_PROGRAM_ID } from "./const";
+import toast, { Toaster } from "react-hot-toast";
+import { CiWallet } from "react-icons/ci";
+// const [isWalletConnected, setIsisWalletConnected] = useState(false);
 
 export function getProgramInstance(connection, wallet) {
-  if (!wallet.publicKey) throw new WalletNotConnectedError();
-
   const provider = new anchor.AnchorProvider(
     connection,
     wallet,

@@ -25,7 +25,9 @@ const Feed = ({ connected, name, url }) => {
 
   const wallet = useWallet();
   const connection = new anchor.web3.Connection(SOLANA_HOST);
+
   const program = getProgramInstance(connection, wallet);
+
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -176,7 +178,7 @@ const Feed = ({ connected, name, url }) => {
 
   return (
     <div className={style.wrapper}>
-      <Toaster position="bottom-left" reverseOrder={false} />{" "}
+      <Toaster position="bottom-left" reverseOrder={false} />
       {/*Push notifications*/}
       <div>
         {loading ? (

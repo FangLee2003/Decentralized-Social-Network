@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { BiLike } from "react-icons/bi";
 import { FaRegCommentAlt } from "react-icons/fa";
-import { FiRefreshCw } from "react-icons/fi";
+import { TiArrowForwardOutline } from "react-icons/ti";
+import { FacebookShareButton } from "react-share";
 import CommentSection from "./CommentSection";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
@@ -21,9 +22,7 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
     timestamp: `text-sm text-[#777]`,
     text: `py-[1rem]`,
     reactionsContainer: `border-t border-[#3a3b3e] text-[18px] flex justify-evenly text-[#b0b3b8] cursor-pointer py-1`,
-    reactionItem: `flex flex-1 items-center justify-center rounded-[0.4rem] hover:bg-[#404041] py-2`,
-    reactionsText: `ml-[1rem]`,
-    refreshIcon: `text-blue-500`,
+    reactionItem: `flex flex-1 items-center justify-center rounded-[0.4rem] hover:bg-[#404041] py-2 gap-2`,
   };
 
   const [isCommentSectionOpened, setIsCommentSectionOpened] = useState(false);
@@ -31,7 +30,7 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
 
   useEffect(() => {
     postDetail();
-  }, [postDetail]);
+  }, [postDetail]); // Update post
 
   useEffect(() => {
     if (comments.length > 0) {
@@ -76,19 +75,20 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
 
       <div className={style.reactionsContainer}>
         <div className={style.reactionItem}>
-          <BiLike />
+          <BiLike size={25} />
           <div className={style.reactionsText}>Like</div>
         </div>
         <div
           className={style.reactionItem}
           onClick={() => setIsCommentSectionOpened(!isCommentSectionOpened)}
         >
-          <FaRegCommentAlt />
+          <FaRegCommentAlt size={20} />
           <div className={style.reactionsText}>Comment</div>
         </div>
-        <div className={style.reactionItem}>
-          <FiRefreshCw className={style.refreshIcon} />
-          <div className={style.reactionsText}>Refresh Comments</div>
+        <div className={style.reactionItem} onClick={postDetail}>
+          <TiArrowForwardOutline size={30} />
+          <FacebookShareButton />
+          <div className={style.reactionsText}>Share</div>
         </div>
       </div>
       {isCommentSectionOpened && (
