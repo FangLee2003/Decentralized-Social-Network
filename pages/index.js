@@ -17,7 +17,7 @@ const style = {
 export default function Home() {
   const [registered, setRegistered] = useState(false);
   const [name, setName] = useState("");
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState("https://avatars.dicebear.com/api/pixel-art-neutral/1.svg");
   const [users, setUsers] = useState([]);
 
   useEffect(() => {

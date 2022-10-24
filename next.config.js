@@ -15,6 +15,12 @@ const nextConfig = {
       "scontent-lax3-1.xx.fbcdn.net",
     ],
   },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+    }
+    return config;
+  }
 };
 
 module.exports = nextConfig;
