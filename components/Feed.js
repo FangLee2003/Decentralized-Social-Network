@@ -176,7 +176,8 @@ const Feed = ({ connected, name, url }) => {
 
   return (
     <div className={style.wrapper}>
-      <Toaster position="bottom-left" reverseOrder={false} />
+      <Toaster position="bottom-left" reverseOrder={false} />{" "}
+      {/*Push notifications*/}
       <div>
         {loading ? (
           <div>Loading...</div>

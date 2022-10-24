@@ -5,6 +5,7 @@ use std::mem::size_of;
 use anchor_lang::solana_program::entrypoint::ProgramResult;
 
 declare_id!("5rUGRjewt6pUSPQEkVMLUzoNbn7vYcdDTFFtGQF5eq7D");
+// 7exhRDwsPdy6bvm5vB9XWhbdN5XHLjscjYY5cNyY3Wng
 
 // Post and comment text length
 const TEXT_LENGTH: usize = 1024;

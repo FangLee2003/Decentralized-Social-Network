@@ -16,6 +16,7 @@
     "@solana/wallet-adapter-wallets": "^0.19.5",
     "@solana/web3.js": "^1.66.2",
     "anchor": "^1.4.1",
+    "build": "^0.1.4",
     "javascript-time-ago": "^2.5.7",
     "next": "latest",
     "programs": "^1.0.0",

@@ -93,10 +93,10 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
       </div>
       {isCommentSectionOpened && (
         <CommentSection
-          comments={comments}
           createCommentForPost={createCommentForPost}
           name={name}
           url={url}
+          comments={comments}
         />
       )}
     </div>
