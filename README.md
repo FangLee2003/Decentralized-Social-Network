@@ -1,6 +1,8 @@
 # Decentralized Social Network
 
-#### DSN store and encrypt data on the Solana blockchain to protect user privacy and avoid piracy.
+Recently, many user data leaks of large companies such as Uber, Facebook, Google, ... have shaken the whole world. In addition, content piracy is also a painful problem that causes a lot of damage both physically and mentally to content creators.
+
+So why don't you try DSN3? Storing and encrypting data completely on Solana Blockchain, the decentralized social network DSN3 will protect your privacy as well as sweat and tears in your content.
 
 ### Try it here: https://dsn3.netlify.app/
 
