@@ -53,12 +53,9 @@ export default function Home() {
 
         <link rel="icon" href="../public/favicon.ico" />
 
-        <meta name="image" property="og:image" content="../assets/dsn.png" />
+        <meta name="image" property="og:image" content="../Decentralized Social Network Preview.png" />
         <meta property="og:title" content="DSN" />
-        <meta
-          property="og:description"
-          content="Decentralized Social Network"
-        />
+        <meta property="og:description" content="Decentralized Social Network" />
         <meta property="og:url" content="https://dsn.netlify.app/" />
       </Helmet>
 
