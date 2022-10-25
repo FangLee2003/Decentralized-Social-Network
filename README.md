@@ -1,4 +1,4 @@
-# Decentralized Social Network
+# Decentralized Social Network 3
 
 Recently, many user data leaks of large companies such as Uber, Facebook, Google, ... have shaken the whole world. In addition, content piracy is also a painful problem that causes a lot of damage both physically and mentally to content creators.
 
