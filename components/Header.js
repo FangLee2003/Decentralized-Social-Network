@@ -14,36 +14,26 @@ const Header = ({ name, url }) => {
     wrapper: `flex items-center w-full h-[4rem] justify-center px-[1rem] py-[0.2rem] sticky top-0 bg-[#252526] shadow-[0px 5px 8px -9px rgba(0, 0, 0, 0.75)] z-20`,
     headerLeft: `flex justify-start w-[30vw] text-xl font-bold text-white `,
     logoLeft: `items-center flex object-contain`,
-    headerCenter: `flex-1 flex items-center justify-center h-full w-[40vw] py-2`,
-    searchContainer: `flex items-center bg-[#3a3b3d] w-[90%] rounded-full py-2 px-4 text-[#b0b3b8]`,
-    searchInput: `border-none px-[0.6rem] bg-transparent outline-none w-max text-white placeholder:text-[#b0b3b8]`,
+    headerCenter: ` flex items-center justify-center h-min w-[40vw]`,
+    buttonCenter: `flex items-center py-3 px-3 mx-2 rounded-[0.2rem] cursor-pointer`,
     headerRight: `flex justify-end w-[30vw] h-min`,
-    buttonRight: `flex items-center px-3 mx-2 rounded-[0.2rem] cursor-pointer`,
+    searchContainer: `flex items-center bg-[#3a3b3d] w-[80%] rounded-full py-2 px-4 text-[#b0b3b8]`,
+    searchInput: `border-none px-[0.6rem] bg-transparent outline-none w-max text-white placeholder:text-[#b0b3b8]`,
     userInfo: `bg-[#FFFFFF] hover:bg-[#e1e1e1]`,
-    userName: `ml-2 text-black font-semibold`,
+    userName: `ml-2 text-black font-semibold truncate`,
     userImage: `rounded-full object-cover`,
     balanceContainer: `bg-[#FFFFFF] hover:bg-[#e1e1e1] text-black hover:text-white`,
     balanceIcon: `object-covers`,
-    balanceText: `ml-2 text-black font-semibold `,
+    balanceText: `ml-2 text-black font-semibold truncate`,
   };
   const [balance] = useWalletBalance();
 
   return (
     <div className={style.wrapper}>
-      <div className={style.headerLeft}>DECENTRALIZED SOCIAL MEDIA</div>
+      <div className={style.headerLeft}>DECENTRALIZED SOCIAL NETWORK</div>
       <div className={style.headerCenter}>
-        <div className={style.searchContainer}>
-          <AiOutlineSearch />
-          <input
-            type="text"
-            className={style.searchInput}
-            placeholder="Search"
-          />
-        </div>
-      </div>
-      <div className={style.headerRight}>
         {name && (
-          <div className={`${style.userInfo} ${style.buttonRight}`}>
+          <div className={`${style.userInfo} ${style.buttonCenter}`}>
             <Image
               src={url}
               className={style.userImage}
@@ -55,7 +45,7 @@ const Header = ({ name, url }) => {
           </div>
         )}
         <WalletMultiButton />
-        <div className={`${style.balanceContainer} ${style.buttonRight}`}>
+        <div className={`${style.balanceContainer} ${style.buttonCenter}`}>
           <Image
             src={solanaLogo}
             className={style.balanceIcon}
@@ -64,6 +54,16 @@ const Header = ({ name, url }) => {
             alt="Solana logo"
           />
           <div className={style.balanceText}>{balance.toFixed(2)} SOL</div>
+        </div>
+      </div>
+      <div className={style.headerRight}>
+        <div className={style.searchContainer}>
+          <AiOutlineSearch />
+          <input
+            type="text"
+            className={style.searchInput}
+            placeholder="Search"
+          />
         </div>
       </div>
     </div>

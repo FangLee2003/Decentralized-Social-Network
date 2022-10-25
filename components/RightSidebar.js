@@ -21,7 +21,7 @@ const RightSidebar = ({ getUsers, users }) => {
   };
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       await getUsers();
     })();
   }, []);

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
+import { Helmet } from "react-helmet";
 import SignUp from "../components/SignUp";
 import Header from "../components/Header";
 import LeftSidebar from "../components/LeftSidebar";
@@ -17,7 +18,9 @@ const style = {
 export default function Home() {
   const [registered, setRegistered] = useState(false);
   const [name, setName] = useState("");
-  const [url, setUrl] = useState("https://avatars.dicebear.com/api/pixel-art-neutral/1.svg");
+  const [url, setUrl] = useState(
+    "https://avatars.dicebear.com/api/pixel-art-neutral/1.svg"
+  );
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -41,8 +44,25 @@ export default function Home() {
 
   return (
     <div className={style.wrapper}>
-      <Header name={name} url={url} />
+      <Helmet>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+        <title>DSN - Decentralized Social Network</title>
+
+        <link rel="icon" href="../public/favicon.ico" />
+
+        <meta name="image" property="og:image" content="../assets/dsn.png" />
+        <meta property="og:title" content="DSN" />
+        <meta
+          property="og:description"
+          content="Decentralized Social Network"
+        />
+        <meta property="og:url" content="https://dsn.netlify.app/" />
+      </Helmet>
+
+      <Header name={name} url={url} />
       {registered ? (
         <div className={style.homeWrapper}>
           <LeftSidebar name={name} url={url} />

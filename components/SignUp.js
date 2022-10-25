@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import dsn from "../assets/dsn.png";
 import { useWallet } from "@solana/wallet-adapter-react";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -35,6 +36,7 @@ const SignUp = ({ setRegistered, name, setName, url, setUrl }) => {
       const walletAddress = res.publicKey.toString();
 
       try {
+        // https://anonystick.com/blog-developer/fetch-javascript-2019121692350668
         await fetch(`/api/createUser`, {
           method: "POST",
           headers: {
@@ -43,7 +45,7 @@ const SignUp = ({ setRegistered, name, setName, url, setUrl }) => {
           body: JSON.stringify({
             userWalletAddress: walletAddress,
             name: name,
-            profileImage: event.target.url.value,
+            profileImage: url,
           }),
         });
       } catch (error) {
@@ -63,12 +65,7 @@ const SignUp = ({ setRegistered, name, setName, url, setUrl }) => {
     <div className={style.wrapper}>
       <Toaster position="bottom-left" reverseOrder={false} />
       <div className={style.logoContainer}>
-        <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"
-          height={60}
-          width={60}
-          alt="facebook logo"
-        />
+        <Image src={dsn} height={60} width={60} alt="facebook logo" />
       </div>
       <div className={style.title}>Please sign up to use DSN</div>
       <form onSubmit={createUser} className={style.form}>
