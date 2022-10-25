@@ -12,14 +12,12 @@ require("@solana/wallet-adapter-react-ui/styles.css");
 const Header = ({ name, url }) => {
   const style = {
     wrapper: `flex items-center w-full h-[4rem] justify-center px-[1rem] py-[0.2rem] sticky top-0 bg-[#252526] shadow-[0px 5px 8px -9px rgba(0, 0, 0, 0.75)] z-20`,
-    headerLeft: `flex justify-start gap-[1rem] w-[35vw]`,
+    headerLeft: `flex justify-start w-[30vw] text-xl font-bold text-white `,
     logoLeft: `items-center flex object-contain`,
-    searchContainer: `flex items-center bg-[#3a3b3d] w-[20vw] rounded-full py-2 px-4 text-[#b0b3b8]`,
-    searchInput: `border-none px-[0.6rem] bg-transparent outline-none w-[15rem] text-white placeholder:text-[#b0b3b8]`,
-    headerCenter: `flex-1 flex items-center justify-center h-full w-[30vw] py-2`,
-    itemCenter: `flex items-center px-[2rem] py-[1rem] cursor-pointer duration-[0.5s] hover:bg-[#555657] rounded-[10px]`,
-    iconCenter: `text-2xl text-[#666]`,
-    headerRight: `flex justify-end w-[35vw] h-min`,
+    headerCenter: `flex-1 flex items-center justify-center h-full w-[40vw] py-2`,
+    searchContainer: `flex items-center bg-[#3a3b3d] w-[90%] rounded-full py-2 px-4 text-[#b0b3b8]`,
+    searchInput: `border-none px-[0.6rem] bg-transparent outline-none w-max text-white placeholder:text-[#b0b3b8]`,
+    headerRight: `flex justify-end w-[30vw] h-min`,
     buttonRight: `flex items-center px-3 mx-2 rounded-[0.2rem] cursor-pointer`,
     userInfo: `bg-[#FFFFFF] hover:bg-[#e1e1e1]`,
     userName: `ml-2 text-black font-semibold`,
@@ -32,14 +30,8 @@ const Header = ({ name, url }) => {
 
   return (
     <div className={style.wrapper}>
-      <div className={style.headerLeft}>
-        <Image
-          className={style.logoLeft}
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"
-          height={40}
-          width={40}
-          alt="logo"
-        />
+      <div className={style.headerLeft}>DECENTRALIZED SOCIAL MEDIA</div>
+      <div className={style.headerCenter}>
         <div className={style.searchContainer}>
           <AiOutlineSearch />
           <input
@@ -47,20 +39,6 @@ const Header = ({ name, url }) => {
             className={style.searchInput}
             placeholder="Search"
           />
-        </div>
-      </div>
-      <div className={style.headerCenter}>
-        <div className={style.itemCenter}>
-          <AiFillHome className={style.iconCenter} />
-        </div>
-        <div className={style.itemCenter}>
-          <BsDisplay className={style.iconCenter} />
-        </div>
-        <div className={style.itemCenter}>
-          <RiGroup2Line className={style.iconCenter} />
-        </div>
-        <div className={style.itemCenter}>
-          <SiFacebookgaming className={style.iconCenter} />
         </div>
       </div>
       <div className={style.headerRight}>
